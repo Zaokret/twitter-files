@@ -35,5 +35,5 @@ To extract targeting criteria from your twitter archieve follow these instructio
   - Open `./data/ad-engagements.js`
   - Replace `window.YTD.ad_engagements.part0` with `module.exports`
   - Add file `ad-targeting-criteria.js` to the root, next to `Your archive.html`
-  - Open the terminal in the root folder R
+  - Open the terminal in the root folder
   - Run the command `node ad-targeting-criteria.js`
