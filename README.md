@@ -28,3 +28,12 @@ To gain access to your twitter archive data follow these instructions:
   - Select Settings and Support > Settings and privacy > Your account. (Or, if you’re in a hurry, you can just use this link.)
   - Click on Download an archive of your data. You may be asked to verify your account.
   - Click on Request archive.
+  - Download ZIP and unpack
+
+To extract targeting criteria from your twitter archieve follow these instructions:
+
+  - Open `./data/ad-engagements.js`
+  - Replace `window.YTD.ad_engagements.part0` with `module.exports`
+  - Add file `ad-targeting-criteria.js` to the root, next to ` Your archive.html`
+  - Open the terminal in the root folder R
+  - Run the command `node ad-targeting-criteria.js`
