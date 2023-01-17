@@ -1,4 +1,4 @@
-Ad targeting criteria is a simple script that maps the twitter archive data `./data/ad-engagements.json` to a map of targeting criteria types and their values.
+Ad targeting criteria is a simple script that maps the twitter archive data `./data/ad-engagements.js` to a map of targeting criteria types and their values.
 
 Targeting criteria detected: 
 `[
@@ -34,6 +34,6 @@ To extract targeting criteria from your twitter archieve follow these instructio
 
   - Open `./data/ad-engagements.js`
   - Replace `window.YTD.ad_engagements.part0` with `module.exports`
-  - Add file `ad-targeting-criteria.js` to the root, next to ` Your archive.html`
+  - Add file `ad-targeting-criteria.js` to the root, next to `Your archive.html`
   - Open the terminal in the root folder R
   - Run the command `node ad-targeting-criteria.js`
