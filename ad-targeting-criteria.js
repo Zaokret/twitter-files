@@ -20,15 +20,22 @@ const allTargetingCriteria = listOfAdTargetingCriteria.reduce(
 );
 
 const targetingTypes = allTargetingCriteria.reduce((types, criteria) => {
-  if (criteria && !types[criteria.targetingType]) {
+  if (criteria) {
     if (!types[criteria.targetingType]) {
       types[criteria.targetingType] = [];
     }
-    if (!types[criteria.targetingType].includes(criteria.targetingValue)) {
+    if (
+      criteria.targetingValue &&
+      !types[criteria.targetingType].includes(criteria.targetingValue)
+    ) {
       types[criteria.targetingType].push(criteria.targetingValue);
     }
   }
   return types;
 }, {});
+
+Object.keys(targetingTypes).forEach(
+  (key) => (targetingTypes[key] = targetingTypes[key].sort())
+);
 
 console.log(targetingTypes);
