@@ -1,4 +1,5 @@
-const listOfAds = require("./data/ad-engagements");
+const listOfAds = require("./ad-engagements.js");
+const fs = require('fs');
 
 const listOfAdTargetingCriteria = listOfAds.map((obj) =>
   obj.ad.adsUserData.adEngagements.engagements
@@ -38,4 +39,4 @@ Object.keys(targetingTypes).forEach(
   (key) => (targetingTypes[key] = targetingTypes[key].sort())
 );
 
-console.log(targetingTypes);
+fs.writeFileSync('./ad-data.json', JSON.stringify(targetingTypes));

@@ -4,7 +4,7 @@
 FILE_TO_MODIFY="ad-engagements.js"
 EXTRACT_SCRIPT="ad-targeting-criteria.js"
 ROOT_FOLDER="."
-DATA_FILE="data.json"
+DATA_FILE="ad-data.json"
 
 # Search for the file in the entire folder and it's subfolders
 TARGET_FILE=$(find "$ROOT_FOLDER" -type f -name "$FILE_TO_MODIFY")
